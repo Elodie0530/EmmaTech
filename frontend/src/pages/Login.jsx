@@ -37,7 +37,7 @@ export default function Login() {
             </label>
           </div>
         </div>
-        <Link to="/Accueil">
+        <Link to="/accueil">
           <button className={login.button} type="submit">
             <PiLockKeyBold size={15} /> se connecter
           </button>

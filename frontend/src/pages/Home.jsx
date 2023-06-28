@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <div className={home.container}>
         <div className={home.div1}>
-          <Link to="/Ajoute-un-appareil">Ajouter un appareil</Link>
+          <Link to="/ajoute-un-appareil">Ajouter un appareil</Link>
         </div>
 
         <div className={home.div2}>Stockage</div>

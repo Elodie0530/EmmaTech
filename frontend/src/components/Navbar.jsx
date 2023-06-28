@@ -12,7 +12,7 @@ export default function Navbar() {
           <nav>
             <ul>
               <li>
-                <Link to="/Ajoute-un-appareil">
+                <Link to="/ajoute-un-appareil">
                   <button type="button">Ajouter un appareil</button>
                 </Link>
               </li>
@@ -24,7 +24,7 @@ export default function Navbar() {
               </li>
             </ul>
           </nav>
-          <Link to="/Accueil">
+          <Link to="/accueil">
             <BiHomeSmile size={45} className={header.home} />
           </Link>
         </div>
