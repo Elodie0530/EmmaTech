@@ -24,7 +24,9 @@ export default function Home() {
         </div>
       </div>
       <div className={home.button}>
-        <button type="button">Déconnexion</button>
+        <button type="button">
+          <Link to="/">Déconnexion</Link>
+        </button>
       </div>
     </section>
   );
