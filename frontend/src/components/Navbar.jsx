@@ -17,10 +17,14 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <button type="button">Stockage</button>
+                <Link to="/stockage">
+                  <button type="button">Stockage</button>
+                </Link>
               </li>
               <li>
-                <button type="button">FAQ</button>
+                <Link to="/foire-aux-questions">
+                  <button type="button">FAQ</button>
+                </Link>
               </li>
             </ul>
           </nav>

@@ -16,8 +16,12 @@ export default function Home() {
           <Link to="/ajoute-un-appareil">Ajouter un appareil</Link>
         </div>
 
-        <div className={home.div2}>Stockage</div>
-        <div className={home.div3}>FAQ</div>
+        <div className={home.div2}>
+          <Link to="/stockage">Stockage</Link>
+        </div>
+        <div className={home.div3}>
+          <Link to="/foire-aux-questions">FAQ</Link>
+        </div>
       </div>
       <div className={home.button}>
         <button type="button">Déconnexion</button>
