@@ -3,12 +3,12 @@
 }
 
 .form {
-  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100vh;
 }
 
 $primary: #e4374f;
