@@ -1,4 +1,5 @@
 import { BsFillPersonFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import home from "../styles/Home.module.css";
 import logo from "../picture/EmmaTech.png";
 
@@ -11,7 +12,10 @@ export default function Home() {
         <img src={logo} alt="" />
       </div>
       <div className={home.container}>
-        <div className={home.div1}>Ajouté un appareil</div>
+        <div className={home.div1}>
+          <Link to="/Ajoute-un-appareil">Ajouter un appareil</Link>
+        </div>
+
         <div className={home.div2}>Stockage</div>
         <div className={home.div3}>FAQ</div>
       </div>

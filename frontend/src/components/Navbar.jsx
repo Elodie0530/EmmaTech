@@ -1,27 +1,32 @@
 import { BiHomeSmile } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import header from "../styles/Header.module.css";
 import logo from "../picture/EmmaTech.png";
 
 export default function Navbar() {
-  const navLink = ["Ajouté un appareil", "Stockage", "FAQ"];
-
-  const renderNavLink = (content) => {
-    return (
-      <ul key={content}>
-        <li>
-          <button type="button">{content}</button>
-        </li>
-      </ul>
-    );
-  };
-
   return (
     <header className={header.header}>
       <div className={header.container}>
         <div className={header.navContainer}>
           <img className={header.logo} src={logo} alt="EmmaTech" />
-          <nav>{navLink.map((nav) => renderNavLink(nav))}</nav>
-          <BiHomeSmile size={45} className={header.home} />
+          <nav>
+            <ul>
+              <li>
+                <Link to="/Ajoute-un-appareil">
+                  <button type="button">Ajouter un appareil</button>
+                </Link>
+              </li>
+              <li>
+                <button type="button">Stockage</button>
+              </li>
+              <li>
+                <button type="button">FAQ</button>
+              </li>
+            </ul>
+          </nav>
+          <Link to="/Accueil">
+            <BiHomeSmile size={45} className={header.home} />
+          </Link>
         </div>
       </div>
     </header>

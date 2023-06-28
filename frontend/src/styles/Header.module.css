@@ -15,7 +15,7 @@
   justify-content: space-between;
 }
 
-.navContainer nav {
+.navContainer ul {
   display: flex;
   gap: 3rem;
 }
