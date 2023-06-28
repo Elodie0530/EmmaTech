@@ -1,4 +1,5 @@
 import { PiLockKeyBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 import logo from "../picture/EmmaTech.png";
 import login from "../styles/Login.module.scss";
 
@@ -36,9 +37,11 @@ export default function Login() {
             </label>
           </div>
         </div>
-        <button className={login.button} type="submit">
-          <PiLockKeyBold size={15} /> se connecter
-        </button>
+        <Link to="/Accueil">
+          <button className={login.button} type="submit">
+            <PiLockKeyBold size={15} /> se connecter
+          </button>
+        </Link>
       </form>
     </section>
   );
