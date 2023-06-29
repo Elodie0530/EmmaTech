@@ -1,5 +1,6 @@
 import { BsArrowRightShort, BsPatchQuestion } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
+import { AiFillCaretRight } from "react-icons/ai";
 import Navbar from "../components/Navbar";
 import faq from "../styles/Faq.module.css";
 
@@ -13,7 +14,8 @@ export default function Faq() {
           <div className={faq.question}>
             <details>
               <summary>
-                - Comment ajouter un nouveau smartphone{" "}
+                <AiFillCaretRight />
+                Comment ajouter un nouveau smartphone{" "}
                 <BsPatchQuestion size={25} className={faq.emoticon} />
               </summary>
               <ol>
@@ -24,7 +26,8 @@ export default function Faq() {
           <div className={faq.question}>
             <details>
               <summary>
-                - Comment trouver les caractéristiques sur l'appareil à
+                <AiFillCaretRight />
+                Comment trouver les caractéristiques sur l'appareil à
                 enregistrer
                 <BsPatchQuestion size={25} className={faq.emoticon} />
               </summary>
@@ -59,7 +62,8 @@ export default function Faq() {
           <div className={faq.question}>
             <details>
               <summary>
-                - Comment savoir le système d'exploitation
+                <AiFillCaretRight />
+                Comment savoir le système d'exploitation
                 <BsPatchQuestion size={25} className={faq.emoticon} />
               </summary>
               <ol>
@@ -72,7 +76,8 @@ export default function Faq() {
           <div className={faq.question}>
             <details>
               <summary>
-                - Comment avoir accès aux smartphones enregistrés
+                <AiFillCaretRight />
+                Comment avoir accès aux smartphones enregistrés
                 <BsPatchQuestion size={25} className={faq.emoticon} />
               </summary>
               <ol>

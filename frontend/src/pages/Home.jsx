@@ -19,7 +19,7 @@ export default function Home() {
       <div className={home.hello}>
         <BsFillPersonFill size={60} />
         <h1>Bienvenue Célia</h1>
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
       </div>
       <div className={home.container}>
         <div className={home.div1}>
