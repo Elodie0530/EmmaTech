@@ -88,7 +88,7 @@ export default function Android() {
               id="imei"
               onChange={filterInput}
               value={imei}
-              variant="filled"
+              variant="standard"
               label="Numéro IMEI"
             />
           </FormControl>
@@ -258,7 +258,9 @@ export default function Android() {
                 Retour
               </button>
             </Link>
-            <input className={survey.cat11} type="submit" />
+            <Link to="/recapitulatif">
+              <input className={survey.cat11} type="submit" />
+            </Link>
           </div>
         </form>
       </section>

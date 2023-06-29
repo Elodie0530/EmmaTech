@@ -9,6 +9,7 @@ import Stockage from "./pages/Stockage";
 import Faq from "./pages/Faq";
 import Confirmation from "./components/Confirmation";
 import StockageRecap from "./components/StockageRecap";
+import SurveyRecap from "./components/SurveyRecap";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/ajoute-un-appareil" element={<Survey />} />
         <Route path="/android" element={<Android />} />
         <Route path="/ios" element={<Ios />} />
+        <Route path="/recapitulatif" element={<SurveyRecap />} />
         <Route path="/stockage" element={<Stockage />} />
         <Route path="/stockage/recapitulatif" element={<StockageRecap />} />
         <Route path="/foire-aux-questions" element={<Faq />} />

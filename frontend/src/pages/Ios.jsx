@@ -107,7 +107,7 @@ export default function Ios() {
               id="imei"
               onChange={filterInput}
               value={imei}
-              variant="filled"
+              variant="standard"
               label="Numéro IMEI"
             />
           </FormControl>
@@ -279,7 +279,13 @@ export default function Ios() {
                 Retour
               </button>
             </Link>
-            <input className={survey.cat11} type="submit" onClick={addPhone} />
+            <Link to="/recapitulatif">
+              <input
+                className={survey.cat11}
+                type="submit"
+                onClick={addPhone}
+              />
+            </Link>
           </div>
         </form>
       </section>
