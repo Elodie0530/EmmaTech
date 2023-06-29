@@ -5,15 +5,17 @@ class PhoneManager extends AbstractManager {
     super({ table: "phone" });
   }
 
-  getall(phone) {
-    return this.database.query(
-      `SELECT *
+  getAll() {
+    return this.database.query(`
+      SELECT ${this.table}.id,brand, model, os, ram, memory, color, charger, cable, categoryPrice_id, state_id 
       FROM ${this.table}
-      JOIN category_price ON ${this.table}.categoryPrice_id = category_price.id
-      WHERE ${this.table}.id = ?`,
-      [phone]
-    );
+      JOIN categoryPrice ON ${this.table}.categoryPrice_id = categoryPrice.id
+    `);
+  }
+
+  add(phoneData) {
+    return this.database.query("INSERT INTO phone SET ?", phoneData);
   }
 }
 
-export default PhoneManager;
+module.exports = PhoneManager;

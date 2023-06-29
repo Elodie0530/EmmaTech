@@ -13,4 +13,6 @@ router.delete("/items/:id", itemControllers.destroy);
 
 router.get("/phones", phoneControllers.getAllPhones);
 
+router.post("/phones", phoneControllers.addPhone);
+
 module.exports = router;
