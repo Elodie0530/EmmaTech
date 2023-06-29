@@ -14,7 +14,21 @@ class PhoneManager extends AbstractManager {
   }
 
   add(phoneData) {
-    return this.database.query("INSERT INTO phone SET ?", phoneData);
+    return this.database.query(
+      "INSERT INTO phone (brand, model, os, ram, memory, color, charger, cable, categoryPrice_id, state_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [
+        phoneData.brand,
+        phoneData.model,
+        phoneData.os,
+        phoneData.ram,
+        phoneData.memory,
+        phoneData.color,
+        phoneData.charger,
+        phoneData.cable,
+        phoneData.categoryPrice_id,
+        phoneData.state_id,
+      ]
+    );
   }
 }
 

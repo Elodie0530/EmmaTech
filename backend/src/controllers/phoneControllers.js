@@ -23,7 +23,8 @@ const addPhone = (req, res) => {
         .status(200)
         .json({ message: "Le téléphone a été ajouté avec succès." });
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error(err);
       res.status(500).json({
         error: "Une erreur s'est produite lors de l'ajout du téléphone.",
       });
