@@ -7,6 +7,7 @@ import Android from "./pages/Android";
 import Ios from "./pages/Ios";
 import Stockage from "./pages/Stockage";
 import Faq from "./pages/Faq";
+import Confirmation from "./components/Confirmation";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/ios" element={<Ios />} />
         <Route path="/stockage" element={<Stockage />} />
         <Route path="/foire-aux-questions" element={<Faq />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </div>
   );
