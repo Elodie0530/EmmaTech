@@ -252,17 +252,15 @@ export default function Android() {
               }}
             />
           </div>
+          <div className={survey.buttons}>
+            <Link to="/ajoute-un-appareil">
+              <button className={survey.cat12} type="button">
+                Retour
+              </button>
+            </Link>
+            <input className={survey.cat11} type="submit" />
+          </div>
         </form>
-        <div className={survey.buttons}>
-          <Link to="/ajoute-un-appareil">
-            <button className={survey.cat12} type="button">
-              Retour
-            </button>
-          </Link>
-          <button className={survey.cat11} type="button">
-            Submit
-          </button>
-        </div>
       </section>
     </>
   );

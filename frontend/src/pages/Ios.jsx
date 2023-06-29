@@ -272,18 +272,16 @@ export default function Ios() {
               }}
             />
           </div>
-        </form>
 
-        <div className={survey.buttons}>
-          <Link to="/ajoute-un-appareil">
-            <button className={survey.cat12} type="button">
-              Retour
-            </button>
-          </Link>
-          <button className={survey.cat11} type="button" onClick={addPhone}>
-            Submit
-          </button>
-        </div>
+          <div className={survey.buttons}>
+            <Link to="/ajoute-un-appareil">
+              <button className={survey.cat12} type="button">
+                Retour
+              </button>
+            </Link>
+            <input className={survey.cat11} type="submit" onClick={addPhone} />
+          </div>
+        </form>
       </section>
     </>
   );
