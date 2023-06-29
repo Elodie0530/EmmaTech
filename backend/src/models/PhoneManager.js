@@ -9,10 +9,11 @@ class PhoneManager extends AbstractManager {
     return this.database.query(
       `SELECT *
       FROM ${this.table}
-      JOIN category_price ON ${this.table}.categoryPrice.id = categoryPrice_id
-      WHERE phone.id = ?`,
+      JOIN category_price ON ${this.table}.categoryPrice_id = category_price.id
+      WHERE ${this.table}.id = ?`,
       [phone]
     );
   }
 }
+
 export default PhoneManager;

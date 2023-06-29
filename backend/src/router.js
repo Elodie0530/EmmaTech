@@ -11,6 +11,10 @@ router.put("/items/:id", itemControllers.edit);
 router.post("/items", itemControllers.add);
 router.delete("/items/:id", itemControllers.destroy);
 
-router.get("/phone", phoneControllers.getAllPhones);
-
+router.get("/phones", phoneControllers.getAllPhones);
+router.get("/brands", phoneControllers.getBrands);
+router.get("/models", phoneControllers.getModel);
+router.get("/rams", phoneControllers.getRAMs);
+router.get("/memories", phoneControllers.getMemories);
+router.get("/colors", phoneControllers.getColors);
 module.exports = router;
