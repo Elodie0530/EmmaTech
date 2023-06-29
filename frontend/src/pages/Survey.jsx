@@ -4,6 +4,10 @@ import Navbar from "../components/Navbar";
 import survey from "../styles/Survey.module.scss";
 
 export default function Survey() {
+  const style = {
+    color: "black",
+  };
+
   return (
     <>
       <Navbar />
@@ -11,14 +15,14 @@ export default function Survey() {
         <h1>Système d'exploitation</h1>
         <div className={survey.divButton}>
           <button className={survey.button1} type="button">
-            <Link to="/android">
+            <Link style={style} to="/android">
               <BsAndroid2 color="black" />
               Android
             </Link>
           </button>
 
           <button className={survey.button2} type="button">
-            <Link to="/ios">
+            <Link style={style} to="/ios">
               <BsApple color="black" />
               IOS
             </Link>
