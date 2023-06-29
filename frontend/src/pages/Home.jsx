@@ -1,36 +1,27 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import { BsFillPersonFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import home from "../styles/Home.module.css";
+import logo from "../picture/EmmaTech.png";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
+    <section className={home.background}>
+      <div className={home.hello}>
+        <BsFillPersonFill size={60} />
+        <h1>Bienvenue Célia</h1>
+        <img src={logo} alt="" />
+      </div>
+      <div className={home.container}>
+        <div className={home.div1}>
+          <Link to="/ajoute-un-appareil">Ajouter un appareil</Link>
+        </div>
 
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+        <div className={home.div2}>Stockage</div>
+        <div className={home.div3}>FAQ</div>
+      </div>
+      <div className={home.button}>
+        <button type="button">Déconnexion</button>
+      </div>
+    </section>
   );
 }

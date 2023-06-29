@@ -1,0 +1,94 @@
+.background {
+  background-image: url(../picture/Fonnd.png);
+  background-repeat: no-repeat;
+  background-size: 110rem;
+}
+
+.background button {
+  background-color: #233d8d;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.hello {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+
+.hello img {
+  width: 50rem;
+  position: absolute;
+  top: 6rem;
+  left: 45rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 18px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.div1 {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: #fecb38;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0px 165px 165px 0px;
+  width: 25rem;
+}
+
+.div2 {
+  grid-area: 4 / 1 / 5/ 2;
+  background-color: #fecb38;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0px 165px 165px 0px;
+  width: 20rem;
+}
+
+.div3 {
+  grid-area: 5 / 1 / 6 / 2;
+  background-color: #fecb38;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0px 165px 165px 0px;
+  width: 15rem;
+}
+
+.div1:hover {
+  transition: 1000ms;
+  padding: 15px 50px;
+  transform: translateY(-0px);
+  background-color: #233d8d;
+}
+
+.div2:hover {
+  transition: 1000ms;
+  padding: 15px 50px;
+  transform: translateY(-0px);
+  background-color: #233d8d;
+}
+
+.div3:hover {
+  transition: 1000ms;
+  padding: 15px 50px;
+  transform: translateY(-0px);
+  background-color: #233d8d;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+button {
+  grid-area: 3 / 2 / 7 / 3;
+}
