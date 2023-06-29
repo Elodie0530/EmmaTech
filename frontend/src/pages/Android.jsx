@@ -1,20 +1,43 @@
 import { useState } from "react";
+import { pink } from "@mui/material/colors";
+import {
+  TextField,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+  Checkbox,
+} from "@mui/material";
 import Navbar from "../components/Navbar";
 import survey from "../styles/Survey.module.scss";
 
 export default function Android() {
   const [brand, setBrand] = useState("");
 
+  const marques = [
+    "Samsung",
+    "Lg",
+    "Huawei",
+    "Nokia",
+    "Sony",
+    "Google",
+    "Xiaomi",
+    "Honor",
+    "One plus",
+    "Motorola",
+    "BlackBerry",
+  ];
+
   const models = {
-    samsung: [
+    Samsung: [
       "Galaxy 5",
       "Galaxy A14",
       "galaxy A54",
       "Galaxy M23",
       "Galaxy S21",
     ],
-    google: ["Pixel 3", "Pixel 4", "Pixel 6", "Pixel 6a", "Pixel 7"],
-    lg: ["G7", "G8", "G11", "V20", "V40"],
+    Google: ["Pixel 3", "Pixel 4", "Pixel 6", "Pixel 6a", "Pixel 7"],
+    Lg: ["G7", "G8", "G11", "V20", "V40"],
   };
 
   const screens = ['4"', '5"', '6"', '7"', '8"', '9"'];
@@ -50,10 +73,15 @@ export default function Android() {
       <section className={survey.survey}>
         <h1>Android</h1>
 
-        <div>
-          <form action="#">
-            <label htmlFor="marques">Marques</label>
-            <select
+        <form className={survey.formulaire} action="#">
+          <FormControl
+            required
+            className={survey.cat1}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="marques">Marques</InputLabel>
+            <Select
               name="Marques"
               id="marques"
               onChange={(event) => {
@@ -61,133 +89,164 @@ export default function Android() {
               }}
               value={brand}
             >
-              <option value="samsung">Samsung</option>
-              <option value="lg">Lg</option>
-              <option value="huawei">Huawei</option>
-              <option value="nokia">Nokia</option>
-              <option value="sony">Sony</option>
-              <option value="google">Google</option>
-              <option value="xiaomi">Xiaomi</option>
-              <option value="honor">Honor</option>
-              <option value="one plus">One plus</option>
-              <option value="motorola">Motorola</option>
-              <option value="blackberry">BlackBerry</option>
-            </select>
+              {marques.map((marque) => (
+                <MenuItem value={marque}>{marque}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="modèles">Modèles</label>
-              <select name="model" id="modèles">
-                {models[brand]?.map((model) => (
-                  <option key={model} value={model}>
-                    {model}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat2}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="modèles">Modèles</InputLabel>
+            <Select name="model" id="modèles">
+              {models[brand]?.map((model) => (
+                <MenuItem key={model} value={model}>
+                  {model}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <label htmlFor="imei">Numéro IMEI</label>
-            <input
+          <div className={survey.cat3}>
+            <TextField
+              required
               maxLength={13}
               type="text"
               id="imei"
               onChange={filterInput}
               value={imei}
+              variant="filled"
+              label="Numéro IMEI"
             />
+          </div>
 
-            <div>
-              <label htmlFor="screen">Taille de l'écran</label>
-              <select name="screen" id="screen">
-                {screens.map((screen) => (
-                  <option key={screen} value={screen}>
-                    {screen}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat4}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="screen">Taille de l'écran</InputLabel>
+            <Select name="screen" id="screen">
+              {screens.map((screen) => (
+                <MenuItem key={screen} value={screen}>
+                  {screen}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="memory">Mémoire</label>
-              <select name="memory" id="memory">
-                {memorys.map((memory) => (
-                  <option key={memory} value={memory}>
-                    {memory}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat5}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="memory">Mémoire</InputLabel>
+            <Select name="memory" id="memory">
+              {memorys.map((memory) => (
+                <MenuItem key={memory} value={memory}>
+                  {memory}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="ram">RAM</label>
-              <select name="ram" id="ram">
-                {rams.map((ram) => (
-                  <option key={ram} value={ram}>
-                    {ram}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat6}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="ram">RAM</InputLabel>
+            <Select name="ram" id="ram">
+              {rams.map((ram) => (
+                <MenuItem key={ram} value={ram}>
+                  {ram}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="network">Réseau</label>
-              <select name="network" id="network">
-                {networks.map((network) => (
-                  <option key={network} value={network}>
-                    {network}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat7}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="network">Réseau</InputLabel>
+            <Select name="network" id="network">
+              {networks.map((network) => (
+                <MenuItem key={network} value={network}>
+                  {network}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="color">Couleur</label>
-              <select name="color" id="color">
-                {colors.map((color) => (
-                  <option key={color} value={color}>
-                    {color}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            className={survey.cat8}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="color">Couleur</InputLabel>
+            <Select name="color" id="color">
+              {colors.map((color) => (
+                <MenuItem key={color} value={color}>
+                  {color}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <label htmlFor="state">Etat</label>
-              <select name="state" id="state">
-                {states.map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <FormControl
+            required
+            className={survey.cat9}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="state">Etat</InputLabel>
+            <Select name="state" id="state">
+              {states.map((state) => (
+                <MenuItem key={state} value={state}>
+                  {state}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-            <div>
-              <p>Accessoires :</p>
-              <label htmlFor="accessory">Aucun</label>
-              <input
-                type="checkbox"
-                value="accessory"
-                name="accessory"
-                id="accessory"
-              />
-              <label htmlFor="accessory">Chargeur</label>
-              <input
-                type="checkbox"
-                value="accessory"
-                name="accessory"
-                id="accessory"
-              />
-              <label htmlFor="accessory">Cable</label>
-              <input
-                type="checkbox"
-                value="accessory"
-                name="accessory"
-                id="accessory"
-              />
-            </div>
+          <div className={survey.cat10}>
+            <p>Accessoires :</p>
+            <label htmlFor="accessory">Aucun</label>
+            <Checkbox defaultChecked />
+            <label htmlFor="accessory">Chargeur</label>
+            <Checkbox
+              defaultChecked
+              sx={{
+                color: pink[800],
+                "&.Mui-checked": {
+                  color: pink[600],
+                },
+              }}
+            />
+            <label htmlFor="accessory">Cable</label>
+            <Checkbox
+              defaultChecked
+              sx={{
+                color: pink[800],
+                "&.Mui-checked": {
+                  color: pink[600],
+                },
+              }}
+            />
+          </div>
 
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+          <input className={survey.cat11} type="submit" value="Submit" />
+        </form>
       </section>
     </>
   );
