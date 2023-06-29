@@ -1,4 +1,5 @@
 import { AiFillCheckCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import stockageRecap from "../styles/StockageRecap.module.css";
 import mobile from "../picture/mobile.png";
 
@@ -40,7 +41,9 @@ export default function StockageRecap() {
 
   return (
     <section className={stockageRecap.stockage}>
-      <button type="button">Retour</button>
+      <Link to="/stockage">
+        <button type="button">Retour</button>
+      </Link>
       <div className={stockageRecap.divContaine}>
         <img className={stockageRecap.mobile} src={mobile} alt={mobile} />
         <h1>Samsung GalaxyS22</h1>
