@@ -3,7 +3,20 @@ import Navbar from "../components/Navbar";
 import survey from "../styles/Survey.module.scss";
 
 export default function Android() {
-  const models = ["galaxy 5", "galaxy S21", "galaxy A54", "pixel 3", "g 11"];
+  const [brand, setBrand] = useState("");
+
+  const models = {
+    samsung: [
+      "Galaxy 5",
+      "Galaxy A14",
+      "galaxy A54",
+      "Galaxy M23",
+      "Galaxy S21",
+    ],
+    google: ["Pixel 3", "Pixel 4", "Pixel 6", "Pixel 6a", "Pixel 7"],
+    lg: ["G7", "G8", "G11", "V20", "V40"],
+  };
+
   const screens = ['4"', '5"', '6"', '7"', '8"', '9"'];
   const memorys = ["16 Go", "32 Go", "64 Go", "128 Go", "256 Go"];
   const rams = [
@@ -17,7 +30,7 @@ export default function Android() {
     "18 Go",
   ];
   const networks = ["4G", "5G"];
-  const colors = ["noir", "blanc", "gris", "bleu", "rose", "vert"];
+  const colors = ["Noir", "Blanc", "Gris", "Bleu", "Rose", "Vert"];
   const states = [
     "DEEE",
     "Réparable",
@@ -40,7 +53,14 @@ export default function Android() {
         <div>
           <form action="#">
             <label htmlFor="marques">Marques</label>
-            <select name="Marques" id="marques">
+            <select
+              name="Marques"
+              id="marques"
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+              value={brand}
+            >
               <option value="samsung">Samsung</option>
               <option value="lg">Lg</option>
               <option value="huawei">Huawei</option>
@@ -57,7 +77,7 @@ export default function Android() {
             <div>
               <label htmlFor="modèles">Modèles</label>
               <select name="model" id="modèles">
-                {models.map((model) => (
+                {models[brand]?.map((model) => (
                   <option key={model} value={model}>
                     {model}
                   </option>
