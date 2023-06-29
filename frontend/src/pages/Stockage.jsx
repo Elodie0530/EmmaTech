@@ -1,8 +1,13 @@
 import { AiOutlineRight, AiFillEye, AiOutlineEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import stockage from "../styles/Stockage.module.css";
 
 export default function Stockage() {
+  const style = {
+    color: "black",
+  };
+
   const array = [
     {
       marque: "Samsung",
@@ -91,7 +96,11 @@ export default function Stockage() {
                   <td>{tab.categorie}</td>
                   <td>{tab.chargeur}</td>
                   <td>{tab.date}</td>
-                  <td>{tab.fiche}</td>
+                  <td>
+                    <Link style={style} to="/stockage/recapitulatif">
+                      {tab.fiche}
+                    </Link>
+                  </td>
                 </tr>
               );
             })}
