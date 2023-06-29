@@ -6,6 +6,34 @@ export default function Android() {
   const [imei, setImei] = useState("");
   const [brand, setBrand] = useState("");
 
+  const addPhone = (event) => {
+    event.preventDefault();
+    fetch(
+      `${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000"}/phones`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ brand, imei }),
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            "Une erreur s'est produite lors de l'ajout du téléphone."
+          );
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data.message); // Afficher le message de réussite
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const marques = [
     "Samsung",
     "Xiaomi",
@@ -85,6 +113,9 @@ export default function Android() {
             ))}
           </select>
         </form>
+        <button type="button" onClick={addPhone}>
+          submit
+        </button>
       </section>
     </>
   );

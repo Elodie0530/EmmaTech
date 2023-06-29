@@ -1,0 +1,15 @@
+POST http://localhost:8080/phones
+Content-Type: application/json
+
+{
+    "brand": "samsung",
+    "model": "galaxy 5",
+    "os": "android",
+    "ram": "2 Go",
+    "memory": "16 Go",
+    "color": "bleu",
+    "charger": true,
+    "cable": false,
+    "categoryPrice_id": 1,
+    "state_id": 3
+}
