@@ -8,6 +8,7 @@ import Ios from "./pages/Ios";
 import Stockage from "./pages/Stockage";
 import Faq from "./pages/Faq";
 import Confirmation from "./components/Confirmation";
+import StockageRecap from "./components/StockageRecap";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/android" element={<Android />} />
         <Route path="/ios" element={<Ios />} />
         <Route path="/stockage" element={<Stockage />} />
+        <Route path="/stockage/recapitulatif" element={<StockageRecap />} />
         <Route path="/foire-aux-questions" element={<Faq />} />
         <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
