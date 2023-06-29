@@ -4,6 +4,7 @@ import survey from "../styles/Survey.module.scss";
 
 export default function Android() {
   const [imei, setImei] = useState("");
+  const [brand, setBrand] = useState("");
 
   const marques = [
     "Samsung",
@@ -16,16 +17,16 @@ export default function Android() {
     "Lg",
   ];
 
-  const modeles = [
-    "Lg Optimus ",
-    "Ascend D1 Qwuad XL",
-    "Ascend G525",
-    "Boulder",
-    "Oppo R819",
-    "OnePlus 5 PRO",
-    "Galaxy M ",
-    "Redmi note 7",
-  ];
+  const modeles = {
+    Lg: ["Lg Optimus"],
+    Samsung: ["Galaxy M"],
+    Xiaomi: ["Mi10"],
+    Google: ["Pixel 7"],
+    Oppo: ["Reno8"],
+    Huawei: ["P20"],
+    OnePlus: ["Oneplus7T"],
+    Realme: ["Realme C55"],
+  };
 
   const couleurs = ["Rouge ", "Noir", "Blanc", "Rose", "Vert", "Jaune"];
 
@@ -41,7 +42,15 @@ export default function Android() {
         <h1>Formulaire Android</h1>
         <form action="#">
           <label htmlFor="lang">Marque</label>
-          <select name="Marque" id="lang">
+          <select
+            name="Marque"
+            id="lang"
+            onChange={(event) => {
+              setBrand(event.target.value);
+            }}
+            value={brand}
+          >
+            <option>---</option>
             {marques.map((marque) => (
               <option value={marque} key={marque}>
                 {marque}
@@ -51,7 +60,7 @@ export default function Android() {
 
           <label htmlFor="modele">Modèle</label>
           <select name="modele" id="modele">
-            {modeles.map((modele) => (
+            {modeles[brand]?.map((modele) => (
               <option value={modele} key={modele}>
                 {modele}
               </option>
