@@ -1,0 +1,41 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../picture/Fonnd.png);
+  background-repeat: no-repeat;
+  background-size: 100rem;
+}
+
+.confirmation img {
+  width: 25rem;
+  padding-bottom: 4rem;
+}
+
+.confirmation h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  gap: 2rem;
+  margin: 1.5rem;
+}
+
+.confirmation button {
+  background-color: #fecb38;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.confirmation button:hover {
+  transition: 1000ms;
+  background-color: #233d8d;
+}
