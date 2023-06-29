@@ -1,6 +1,5 @@
 .header {
   background-color: #00acb0;
-  position: absolute;
   width: 100%;
 }
 
@@ -21,6 +20,9 @@
 }
 
 .navContainer button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #fff;
   position: relative;
   font-size: 1.3rem;

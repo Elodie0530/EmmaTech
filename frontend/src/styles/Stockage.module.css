@@ -1,0 +1,46 @@
+.stockage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../picture/Fonnd.png);
+  background-repeat: no-repeat;
+  background-size: 110rem;
+  padding-top: 1rem;
+}
+
+.stockage table {
+  font-size: 1.2rem;
+  caption-side: bottom;
+}
+
+.stockage h1 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.stockage th {
+  background-color: #557cba;
+  width: 10rem;
+}
+
+.stockage td {
+  background-color: #ced4e5;
+  height: 2rem;
+}
+
+.stockage th,
+td {
+  padding: 0.7em;
+  text-align: center;
+}
+
+.stockage caption {
+  background-color: #557cba;
+  font-weight: 600;
+}
+
+.stockage button {
+  background-color: transparent;
+  border: none;
+  padding-left: 1rem;
+}
