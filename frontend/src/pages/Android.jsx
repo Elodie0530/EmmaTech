@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { pink } from "@mui/material/colors";
 import {
   TextField,
@@ -80,38 +81,6 @@ export default function Android() {
             variant="standard"
             sx={{ m: 1, minWidth: 120 }}
           >
-            <InputLabel htmlFor="marques">Marques</InputLabel>
-            <Select
-              name="Marques"
-              id="marques"
-              onChange={(event) => {
-                setBrand(event.target.value);
-              }}
-              value={brand}
-            >
-              {marques.map((marque) => (
-                <MenuItem value={marque}>{marque}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-
-          <FormControl
-            required
-            className={survey.cat2}
-            variant="standard"
-            sx={{ m: 1, minWidth: 120 }}
-          >
-            <InputLabel htmlFor="modèles">Modèles</InputLabel>
-            <Select name="model" id="modèles">
-              {models[brand]?.map((model) => (
-                <MenuItem key={model} value={model}>
-                  {model}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-
-          <div className={survey.cat3}>
             <TextField
               required
               maxLength={13}
@@ -122,7 +91,46 @@ export default function Android() {
               variant="filled"
               label="Numéro IMEI"
             />
-          </div>
+          </FormControl>
+
+          <FormControl
+            required
+            className={survey.cat2}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="marques">Marques</InputLabel>
+            <Select
+              name="Marques"
+              id="marques"
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+              value={brand}
+            >
+              {marques.map((marque) => (
+                <MenuItem key={marque} value={marque}>
+                  {marque}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+
+          <FormControl
+            required
+            className={survey.cat3}
+            variant="standard"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel htmlFor="modèles">Modèle</InputLabel>
+            <Select name="model" id="modèles">
+              {models[brand]?.map((model) => (
+                <MenuItem key={model} value={model}>
+                  {model}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
           <FormControl
             required
@@ -244,9 +252,17 @@ export default function Android() {
               }}
             />
           </div>
-
-          <input className={survey.cat11} type="submit" value="Submit" />
         </form>
+        <div className={survey.buttons}>
+          <Link to="/ajoute-un-appareil">
+            <button className={survey.cat12} type="button">
+              Retour
+            </button>
+          </Link>
+          <button className={survey.cat11} type="button">
+            Submit
+          </button>
+        </div>
       </section>
     </>
   );

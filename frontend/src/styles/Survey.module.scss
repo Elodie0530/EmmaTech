@@ -78,20 +78,35 @@
   grid-area: 3 / 3 / 4 / 4;
 }
 .cat10 {
+  padding-top: 2rem;
   text-align: center;
   grid-area: 4 / 2 / 4 / 3;
+  padding-bottom: 2rem;
 }
 .cat11 {
   height: 2.7rem;
-  grid-area: 6 / 2 / 7 / 3;
+  width: 10rem;
   background-color: #fecb38;
   border-radius: 0.5rem;
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
+  margin: 1rem;
 }
 
-.cat11:hover {
+.cat11:hover,
+.cat12:hover {
   transition: 1000ms;
   background-color: #233d8d;
+}
+
+.cat12 {
+  height: 2.7rem;
+  width: 10rem;
+  background-color: #fecb38;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 1rem;
 }
