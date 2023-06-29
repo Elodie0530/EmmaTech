@@ -1,5 +1,6 @@
 .header {
   background-color: #00acb0;
+  position: absolute;
   width: 100%;
 }
 
@@ -14,7 +15,7 @@
   justify-content: space-between;
 }
 
-.navContainer nav {
+.navContainer ul {
   display: flex;
   gap: 3rem;
 }
