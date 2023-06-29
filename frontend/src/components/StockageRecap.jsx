@@ -54,7 +54,7 @@ export default function StockageRecap() {
             return (
               <div>
                 <h2>
-                  {liste.name} : {liste.response}
+                  {liste.name} : {liste.response}{" "}
                   <AiFillCheckCircle color="green" />
                 </h2>
               </div>

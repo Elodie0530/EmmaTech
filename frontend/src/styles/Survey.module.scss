@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-image: url(../picture/Fonnd.png);
   background-repeat: no-repeat;
   background-size: 110rem;
 }
 
 .survey h1 {
+  padding-top: 2rem;
   font-size: 3rem;
+  padding-bottom: 2rem;
 }
 
 .divButton {
@@ -37,4 +38,82 @@
 }
 .button2 {
   grid-area: 2 / 2 / 3 / 3;
+}
+
+/*Android*/
+.formulaire {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+.cat1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.cat2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.cat3 {
+  text-align: center;
+  grid-area: 1 / 3 / 2 / 4;
+}
+.cat4 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.cat5 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.cat6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.cat7 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.cat8 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.cat9 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.cat10 {
+  padding-top: 2rem;
+  text-align: center;
+  grid-area: 4 / 2 / 4 / 3;
+  padding-bottom: 2rem;
+}
+.cat11 {
+  height: 2.7rem;
+  width: 10rem;
+  background-color: #fecb38;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.cat11:hover,
+.cat12:hover {
+  transition: 1000ms;
+  background-color: #233d8d;
+}
+
+.cat12 {
+  height: 2.7rem;
+  width: 10rem;
+  background-color: #fecb38;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  bottom: 3%;
+  left: 37%;
 }
