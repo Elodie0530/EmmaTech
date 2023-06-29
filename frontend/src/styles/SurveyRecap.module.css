@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../picture/Fonnd.png);
-  background-repeat: no-repeat;
-  background-size: 110rem;
 }
 
 .mobile {

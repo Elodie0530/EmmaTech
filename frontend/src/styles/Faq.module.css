@@ -1,9 +1,6 @@
 .faq {
   display: flex;
   flex-direction: column;
-  background-image: url(../picture/Fonnd.png);
-  background-repeat: no-repeat;
-  background-size: 100rem;
 }
 
 .faq h1 {
