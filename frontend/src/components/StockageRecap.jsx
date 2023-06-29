@@ -42,7 +42,9 @@ export default function StockageRecap() {
   return (
     <section className={stockageRecap.stockage}>
       <Link to="/stockage">
-        <button type="button">Retour</button>
+        <button className={stockageRecap.button} type="button">
+          Retour
+        </button>
       </Link>
       <div className={stockageRecap.divContaine}>
         <img className={stockageRecap.mobile} src={mobile} alt={mobile} />
