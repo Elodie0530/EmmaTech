@@ -16,17 +16,17 @@ export default function Android() {
   const [brand, setBrand] = useState("");
 
   const marques = [
-    "Samsung",
-    "Lg",
-    "Huawei",
-    "Nokia",
-    "Sony",
-    "Google",
-    "Xiaomi",
-    "Honor",
-    "One plus",
-    "Motorola",
     "BlackBerry",
+    "Google",
+    "Honor",
+    "Huawei",
+    "Lg",
+    "Motorola",
+    "Nokia",
+    "One plus",
+    "Samsung",
+    "Sony",
+    "Xiaomi",
   ];
 
   const models = {
@@ -54,7 +54,7 @@ export default function Android() {
     "18 Go",
   ];
   const networks = ["4G", "5G"];
-  const colors = ["Noir", "Blanc", "Gris", "Bleu", "Rose", "Vert"];
+  const colors = ["Blanc", "Bleu", "Gris", "Noir", "Rose", "Vert"];
   const states = [
     "DEEE",
     "Réparable",

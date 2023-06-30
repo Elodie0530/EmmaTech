@@ -81,7 +81,7 @@ export default function Ios() {
     "Reconditionné",
   ];
 
-  const couleurs = ["Rouge ", "Noir", "Blanc", "Rose", "Vert", "Jaune"];
+  const couleurs = ["Blanc", "Jaune", "Noir", "Rose", "Rouge ", "Vert"];
 
   const filterInput = (event) => {
     setImei(event.target.value.replace(/\D/, ""));
