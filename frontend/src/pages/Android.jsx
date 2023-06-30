@@ -228,10 +228,10 @@ export default function Android() {
           </FormControl>
 
           <div className={survey.cat10}>
-            <InputLabel>Accessoires :</InputLabel>
-            <InputLabel htmlFor="accessory">Aucun</InputLabel>
+            <p label="Top">Accessoires :</p>
+            <label htmlFor="accessory">Aucun</label>
             <Checkbox defaultChecked />
-            <InputLabel htmlFor="accessory">Chargeur</InputLabel>
+            <label htmlFor="accessory">Chargeur</label>
             <Checkbox
               defaultChecked
               sx={{
@@ -241,7 +241,7 @@ export default function Android() {
                 },
               }}
             />
-            <InputLabel htmlFor="accessory">Cable</InputLabel>
+            <label htmlFor="accessory">Cable</label>
             <Checkbox
               defaultChecked
               sx={{
