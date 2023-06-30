@@ -46,18 +46,18 @@ export default function Ios() {
 
   const modeles = {
     Apple: [
-      "iphone 14",
-      "iphone 14 Pro",
-      "iphone 14 Pro Max",
-      "iphone 14 Pro Plus",
-      "iphone 13",
-      "iphone 13 Mini",
-      "iphone 13 Pro",
-      "iphone 12 Pro Plus",
-      "iphone 12",
-      "iphone 14 Pro",
-      "iphone 12 Pro Max",
-      "iphone 12 Mini",
+      "Iphone 14",
+      "Iphone 14 Pro",
+      "Iphone 14 Pro Max",
+      "Iphone 14 Pro Plus",
+      "Iphone 13",
+      "Iphone 13 Mini",
+      "Iphone 13 Pro",
+      "Iphone 12 Pro Plus",
+      "Iphone 12",
+      "Iphone 14 Pro",
+      "Iphone 12 Pro Max",
+      "Iphone 12 Mini",
     ],
   };
   const screens = ['4"', '5"', '6"', '7"', '8"', '9"'];
@@ -81,7 +81,7 @@ export default function Ios() {
     "Reconditionné",
   ];
 
-  const couleurs = ["Rouge ", "Noir", "Blanc", "Rose", "Vert", "Jaune"];
+  const couleurs = ["Blanc", "Jaune", "Noir", "Rose", "Rouge ", "Vert"];
 
   const filterInput = (event) => {
     setImei(event.target.value.replace(/\D/, ""));
