@@ -116,6 +116,20 @@
 }
 
 @media screen and (max-width: 600px) {
+  /*Survey*/
+
+  .survey h1 {
+    display: flex;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+  }
+
+  .divButton button {
+    font-size: 2rem;
+  }
+
+  /*Formulaire Android Ios*/
   .formulaire {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
