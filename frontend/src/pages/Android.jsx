@@ -249,10 +249,10 @@ export default function Android() {
                   />
                 }
               />
-              <FormControl
+              <FormControlLabel
                 htmlFor="accessory"
-                value="Chargeur"
-                label="Chargeur"
+                value="Câble"
+                label="Câble"
                 labelPlacement="bottom"
                 control={
                   <Checkbox
