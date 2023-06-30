@@ -33,7 +33,7 @@ export default function Android() {
     Samsung: [
       "Galaxy 5",
       "Galaxy A14",
-      "galaxy A54",
+      "Galaxy A54",
       "Galaxy M23",
       "Galaxy S21",
     ],
