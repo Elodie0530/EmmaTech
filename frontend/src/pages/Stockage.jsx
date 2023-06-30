@@ -1,4 +1,4 @@
-import { AiOutlineRight, AiFillEye, AiOutlineEye } from "react-icons/ai";
+import { AiFillEye, AiOutlineEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import stockage from "../styles/Stockage.module.css";
@@ -69,12 +69,7 @@ export default function Stockage() {
       <section className={stockage.stockage}>
         <h1>Stockage</h1>
         <table>
-          <caption>
-            1/44
-            <button type="button">
-              <AiOutlineRight size={15} />
-            </button>
-          </caption>
+          <caption>1/1</caption>
           <thead>
             <tr>
               <th>Marque</th>

@@ -8,6 +8,9 @@ import {
   FormControl,
   Select,
   Checkbox,
+  FormControlLabel,
+  FormLabel,
+  FormGroup,
 } from "@mui/material";
 import Navbar from "../components/Navbar";
 import survey from "../styles/Survey.module.scss";
@@ -247,31 +250,41 @@ export default function Ios() {
             </Select>
           </FormControl>
 
-          <div className={survey.cat10}>
-            <p>Accessoires :</p>
-            <label htmlFor="accessory">Aucun</label>
-            <Checkbox defaultChecked />
-            <label htmlFor="accessory">Chargeur</label>
-            <Checkbox
-              defaultChecked
-              sx={{
-                color: pink[800],
-                "&.Mui-checked": {
-                  color: pink[600],
-                },
-              }}
-            />
-            <label htmlFor="accessory">Cable</label>
-            <Checkbox
-              defaultChecked
-              sx={{
-                color: pink[800],
-                "&.Mui-checked": {
-                  color: pink[600],
-                },
-              }}
-            />
-          </div>
+          <FormControl className={survey.cat10}>
+            <FormLabel>Accessoires :</FormLabel>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                htmlFor="accessory"
+                value="Chargeur"
+                label="Chargeur"
+                labelPlacement="bottom"
+                control={
+                  <Checkbox
+                    sx={{
+                      color: pink[800],
+                      "&.Mui-checked": { color: pink[600] },
+                    }}
+                  />
+                }
+              />
+              <FormControlLabel
+                htmlFor="accessory"
+                value="Câble"
+                label="Câble"
+                labelPlacement="bottom"
+                control={
+                  <Checkbox
+                    sx={{
+                      color: pink[800],
+                      "&.Mui-checked": {
+                        color: pink[600],
+                      },
+                    }}
+                  />
+                }
+              />
+            </FormGroup>
+          </FormControl>
 
           <div className={survey.buttons}>
             <Link to="/ajoute-un-appareil">

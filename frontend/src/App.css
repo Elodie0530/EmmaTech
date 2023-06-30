@@ -16,3 +16,10 @@ body {
 li {
   list-style: none;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(./picture/FondMobile.png);
+    background-size: 45rem;
+  }
+}

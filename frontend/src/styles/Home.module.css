@@ -88,12 +88,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-  .background {
-    background-image: url(../picture/FondMobile.png);
-    background-size: cover;
-    height: 100vh;
-  }
-
   .hello img {
     display: none;
   }

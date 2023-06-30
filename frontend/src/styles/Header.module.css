@@ -54,3 +54,14 @@
   border-radius: 2rem;
   color: #fecb38;
 }
+
+@media screen and (max-width: 600px) {
+  .navContainer button {
+    font-size: 0.7rem;
+  }
+
+  .navContainer ul {
+    display: none;
+    gap: none;
+  }
+}

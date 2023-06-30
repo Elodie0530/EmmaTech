@@ -8,6 +8,9 @@ import {
   FormControl,
   Select,
   Checkbox,
+  FormLabel,
+  FormGroup,
+  FormControlLabel,
 } from "@mui/material";
 import Navbar from "../components/Navbar";
 import survey from "../styles/Survey.module.scss";
@@ -35,7 +38,7 @@ export default function Android() {
       "Galaxy A14",
       "Galaxy A54",
       "Galaxy M23",
-      "Galaxy S21",
+      "Galaxy S22",
     ],
     Google: ["Pixel 3", "Pixel 4", "Pixel 6", "Pixel 6a", "Pixel 7"],
     Lg: ["G7", "G8", "G11", "V20", "V40"],
@@ -227,31 +230,44 @@ export default function Android() {
             </Select>
           </FormControl>
 
-          <div className={survey.cat10}>
-            <p>Accessoires :</p>
-            <label htmlFor="accessory">Aucun</label>
-            <Checkbox defaultChecked />
-            <label htmlFor="accessory">Chargeur</label>
-            <Checkbox
-              defaultChecked
-              sx={{
-                color: pink[800],
-                "&.Mui-checked": {
-                  color: pink[600],
-                },
-              }}
-            />
-            <label htmlFor="accessory">Cable</label>
-            <Checkbox
-              defaultChecked
-              sx={{
-                color: pink[800],
-                "&.Mui-checked": {
-                  color: pink[600],
-                },
-              }}
-            />
-          </div>
+          <FormControl className={survey.cat10}>
+            <FormLabel label="Top">Accessoires :</FormLabel>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                htmlFor="accessory"
+                value="Chargeur"
+                label="Chargeur"
+                labelPlacement="bottom"
+                control={
+                  <Checkbox
+                    sx={{
+                      color: pink[800],
+                      "&.Mui-checked": {
+                        color: pink[600],
+                      },
+                    }}
+                  />
+                }
+              />
+              <FormControlLabel
+                htmlFor="accessory"
+                value="Câble"
+                label="Câble"
+                labelPlacement="bottom"
+                control={
+                  <Checkbox
+                    sx={{
+                      color: pink[800],
+                      "&.Mui-checked": {
+                        color: pink[600],
+                      },
+                    }}
+                  />
+                }
+              />
+            </FormGroup>
+          </FormControl>
+
           <div className={survey.buttons}>
             <Link to="/ajoute-un-appareil">
               <button className={survey.cat12} type="button">

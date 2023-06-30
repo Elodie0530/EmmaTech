@@ -41,3 +41,26 @@ td {
   border: none;
   padding-left: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+  .stockage th {
+    width: 5rem;
+    font-size: 0.7rem;
+  }
+
+  .stockage td {
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+
+  .stockage th,
+  td {
+    padding: 0.7em;
+    text-align: center;
+  }
+
+  .stockage caption {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
