@@ -1,3 +1,27 @@
+<h2> Projet EmmaTech</h2>
+
+<div>
+<p>Début du projet à 10 heure le 28/06/2023</p>
+<p>Fin du projet à 10 heure le 30/06/2023</p>
+</div>
+
+<div>
+<h3>Description :</h3>
+<p>Hackathon national de 48 heures avec Emmaüs Connect</p>
+<p>Développer une plateforme, afin de permettre d'aider les bénévoles à estimer le prix d'un téléphone en fonction de ses caractéristiques</p>
+</div>
+
+<div>
+<h3>Project collaborators :</h3>
+
+<ul>
+<li> <a href="https://www.linkedin.com/in/ahmedelamri/">Ahmed El Amri</a></li>
+<li> <a href="https://www.linkedin.com/in/apompidou/">Alexandre Pompidou</a></li>
+<li> <a href="https://www.linkedin.com/in/c%C3%A9lia-kleczynski-4b556b268/">Célia Kleczynski</a></li>
+<li> <a href="https://www.linkedin.com/in/elodie-jehl/">Elodie Jehl</a></li>
+</ul>
+</div>
+
 ## Concept
 
 Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Il est préconfiguré avec un ensemble d'outils qui aideront les élèves à produire un code correspondant mieux aux standards du monde du travail et plus facile à maintenir, tout en restant simple à utiliser.

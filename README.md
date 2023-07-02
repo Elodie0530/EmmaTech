@@ -1,3 +1,27 @@
+<h2> Project EmmaTech</h2>
+
+<div>
+<p>Start of the project at 10 a.m. on 28/06/2023</p>
+<p>End of the project at 10 a.m. on 30/06/2023</p>
+</div>
+
+<div>
+<h3>Description :</h3>
+<p>Hackathon national 48 hours for Emmaüs Connect</p>
+<p>Develop a platform to help volunteers estimate the price of a phone based on its features </p>
+</div>
+
+<div>
+<h3>Project collaborators :</h3>
+
+<ul>
+<li> <a href="https://www.linkedin.com/in/ahmedelamri/">Ahmed El Amri</a></li>
+<li> <a href="https://www.linkedin.com/in/apompidou/">Alexandre Pompidou</a></li>
+<li> <a href="https://www.linkedin.com/in/c%C3%A9lia-kleczynski-4b556b268/">Célia Kleczynski</a></li>
+<li> <a href="https://www.linkedin.com/in/elodie-jehl/">Elodie Jehl</a></li>
+</ul>
+</div>
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
